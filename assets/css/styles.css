@@ -121,27 +121,16 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .lang-btn:hover { color: var(--text); }
 .lang-btn.active { background: var(--accent); color: var(--on-accent); }
 
-/* refined, elegant CV link in the navbar */
+/* clean, minimal CV link in the navbar */
 .nav-cv {
-  display: inline-flex; align-items: center; gap: 7px;
-  font-size: 13px; font-weight: 600; letter-spacing: .2px; color: var(--text);
-  padding: 8px 15px 8px 13px; border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
-  background: var(--accent-soft);
-  transition: color .25s ease, border-color .25s ease, background .25s ease, transform .25s ease, box-shadow .25s ease;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 14px; font-weight: 500; color: var(--muted);
+  padding: 6px 4px; background: transparent; border: 0;
+  transition: color .2s ease;
 }
-.nav-cv svg {
-  color: var(--accent); flex-shrink: 0;
-  transition: transform .3s ease;
-}
-.nav-cv:hover {
-  color: var(--on-accent);
-  border-color: transparent;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px var(--accent-soft);
-}
-.nav-cv:hover svg { color: var(--on-accent); transform: translateY(2px); }
+.nav-cv svg { flex-shrink: 0; transition: transform .25s ease; }
+.nav-cv:hover { color: var(--accent); }
+.nav-cv:hover svg { transform: translateY(2px); }
 
 /* theme (dark/light) toggle */
 .theme-toggle {
