@@ -121,15 +121,16 @@ h1, h2, h3 { line-height: 1.2; font-weight: 700; }
 .lang-btn:hover { color: var(--text); }
 .lang-btn.active { background: var(--accent); color: var(--on-accent); }
 
-/* clean, minimal CV link in the navbar */
+/* small, framed, elegant CV link in the navbar */
 .nav-cv {
   display: inline-flex; align-items: center; gap: 6px;
-  font-size: 14px; font-weight: 500; color: var(--muted);
-  padding: 6px 4px; background: transparent; border: 0;
-  transition: color .2s ease;
+  font-size: 13px; font-weight: 500; color: var(--muted);
+  padding: 6px 13px; border-radius: 999px;
+  border: 1px solid var(--border); background: transparent;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
 }
 .nav-cv svg { flex-shrink: 0; transition: transform .25s ease; }
-.nav-cv:hover { color: var(--accent); }
+.nav-cv:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
 .nav-cv:hover svg { transform: translateY(2px); }
 
 /* theme (dark/light) toggle */
