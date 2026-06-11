@@ -6,14 +6,14 @@
   "nav.experience": "Experience",
   "nav.education": "Education",
   "nav.contact": "Contact",
-  "nav.cv": "Download CV",
+  "nav.cv": "Résumé",
   "nav.theme": "Toggle dark / light theme",
 
   "hero.greeting": "Hello, I'm",
   "hero.role": "Control & Automation Engineer · Ph.D. Researcher · AI/ML",
   "hero.desc": "Dedicated Control & Automation Engineer with hands-on expertise in PLC, SCADA, and control systems, combined with applied machine learning research. Driven by innovation, efficiency, and engineering excellence.",
   "hero.contactBtn": "Get in touch",
-  "hero.cvBtn": "Download CV",
+  "hero.cvBtn": "Résumé",
 
   "about.eyebrow": "Get to know me",
   "about.title": "About Me",
