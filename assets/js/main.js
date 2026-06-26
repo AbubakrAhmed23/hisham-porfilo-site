@@ -62,7 +62,11 @@ const revealObserver = new IntersectionObserver(
   },
   { threshold: 0.15 }
 );
-document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+// observe a set of .reveal elements (default: whole document).
+// exposed so content.js can register cards it renders after page load.
+window.HHObserveReveals = (root = document) =>
+  root.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+window.HHObserveReveals();
 
 // trigger the segment scale animation when a skill card enters view
 const skillObserver = new IntersectionObserver(

@@ -54,6 +54,10 @@
     document.querySelectorAll(".lang-btn").forEach((btn) =>
       btn.classList.toggle("active", btn.dataset.lang === lang)
     );
+
+    // let data-driven sections (content.js) re-render in the new language
+    window.HHLang = lang;
+    window.dispatchEvent(new CustomEvent("hh:langchange", { detail: { lang } }));
   }
 
   // wire up buttons

@@ -193,20 +193,8 @@
       <div class="container">
         <p class="section-eyebrow" data-i18n="research.eyebrow">Academic work</p>
         <h2 class="section-title" data-i18n="research.title">Research &amp; Publications</h2>
-        <div class="pub-list">
-          <a class="pub-card reveal" href="https://ieeexplore.ieee.org/abstract/document/10946099" target="_blank" rel="noopener">
-            <div class="pub-tag">IEEE Access</div>
-            <h3 data-i18n="research.pub1.title">Wavelet-Enhanced Hybrid LSTM-XGBoost Model for Predicting Time Series Containing Unpredictable Events</h3>
-            <p data-i18n="research.pub1.desc">A hybrid forecasting framework combining wavelet decomposition with LSTM and XGBoost to improve prediction accuracy for volatile time series.</p>
-            <div class="pub-meta"><span data-i18n="research.journal">Journal article</span> · IEEE Access <span class="pub-arrow" aria-hidden="true">↗</span></div>
-          </a>
-          <a class="pub-card reveal" href="https://www.researchgate.net/publication/395460220_Comparison_of_Deep_Learning_Architectures_to_Evaluate_the_Effect_of_COVID-19_on_Electricity_Consumption" target="_blank" rel="noopener">
-            <div class="pub-tag" data-i18n="research.tagConf">Deep Learning</div>
-            <h3 data-i18n="research.pub2.title">Comparison of Deep Learning Architectures to Evaluate the Effect of COVID-19 on Electricity Consumption</h3>
-            <p data-i18n="research.pub2.desc">A comparative study of deep learning architectures analyzing the impact of the COVID-19 pandemic on electricity consumption patterns.</p>
-            <div class="pub-meta"><span data-i18n="research.paper">Research paper</span> <span class="pub-arrow" aria-hidden="true">↗</span></div>
-          </a>
-        </div>
+        <!-- Publication cards are rendered from assets/data/content.json by content.js -->
+        <div class="pub-list" id="pub-list"></div>
         <p class="muted-note" data-i18n="research.phd">Ph.D. focus area: Control and Automation Engineering — Yıldız Technical University (ongoing).</p>
       </div>
     </section>
@@ -216,23 +204,8 @@
       <div class="container">
         <p class="section-eyebrow" data-i18n="projects.eyebrow">Selected work</p>
         <h2 class="section-title" data-i18n="projects.title">Projects</h2>
-        <div class="proj-grid">
-          <article class="proj-card reveal">
-            <h3 data-i18n="projects.p1.title">Robotic Arm Design &amp; Implementation</h3>
-            <p data-i18n="projects.p1.desc">Designed and implemented a functional robotic arm, covering mechanical design, actuation, and control system integration.</p>
-            <div class="tags"><span>Control Systems</span><span>SolidWorks</span><span>Embedded</span></div>
-          </article>
-          <article class="proj-card reveal">
-            <h3 data-i18n="projects.p2.title">Wavelet-Integrated Forecasting Framework</h3>
-            <p data-i18n="projects.p2.desc">A time-series forecasting framework integrating wavelet transforms with machine learning models for robust prediction under uncertainty.</p>
-            <div class="tags"><span>Python</span><span>Machine Learning</span><span>LSTM</span><span>XGBoost</span></div>
-          </article>
-          <article class="proj-card reveal">
-            <h3 data-i18n="projects.p3.title">COVID-19 Electricity Consumption Study</h3>
-            <p data-i18n="projects.p3.desc">Applied and compared deep learning architectures to model the effect of the pandemic on national electricity consumption.</p>
-            <div class="tags"><span>Deep Learning</span><span>Python</span><span>Time Series</span></div>
-          </article>
-        </div>
+        <!-- Project cards are rendered from assets/data/content.json by content.js -->
+        <div class="proj-grid" id="proj-grid"></div>
       </div>
     </section>
 
@@ -241,42 +214,12 @@
       <div class="container">
         <p class="section-eyebrow" data-i18n="exp.eyebrow">Career path</p>
         <h2 class="section-title" data-i18n="exp.title">Experience</h2>
-        <div class="timeline">
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <div class="tl-date">Jan 2021 – Oct 2022</div>
-              <h3 data-i18n="exp.e1.role">Teaching Assistant</h3>
-              <div class="tl-org">Omdurman Islamic University — Omdurman, Sudan</div>
-              <p data-i18n="exp.e1.desc">Supported instruction and laboratory work in control and electrical engineering courses.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <div class="tl-date">Feb 2021 – Jul 2021</div>
-              <h3 data-i18n="exp.e2.role">Automation System Engineer</h3>
-              <div class="tl-org">Zeta Automation Systems — Khartoum, Sudan</div>
-              <p data-i18n="exp.e2.desc">Worked on industrial automation solutions, PLC programming, and control system integration.</p>
-            </div>
-          </div>
-          <div class="tl-item reveal">
-            <div class="tl-dot"></div>
-            <div class="tl-content">
-              <div class="tl-date">2017 – 2020</div>
-              <h3 data-i18n="exp.e3.role">Volunteer</h3>
-              <div class="tl-org">The Little Volunteer Organization — Khartoum, Sudan</div>
-              <p data-i18n="exp.e3.desc">Contributed to community initiatives and team-based volunteer programs.</p>
-            </div>
-          </div>
-        </div>
+        <!-- Timeline items are rendered from assets/data/content.json by content.js -->
+        <div class="timeline" id="timeline"></div>
 
         <h3 class="sub-title" data-i18n="exp.internships">Internships</h3>
-        <div class="intern-grid">
-          <div class="intern-card reveal"><strong>Sudanese Electricity Transmission Co.</strong><span data-i18n="exp.i1">Devices &amp; Control, Substations (10 kV), Protection</span></div>
-          <div class="intern-card reveal"><strong>Automation Research Center (ARC)</strong><span data-i18n="exp.i2">SCADA, RTU, Master Station, Smart Grid</span></div>
-          <div class="intern-card reveal"><strong>DAL Food Industries</strong><span data-i18n="exp.i3">PLCs, HMI &amp; communication protocols (practical)</span></div>
-        </div>
+        <!-- Internship cards are rendered from assets/data/content.json by content.js -->
+        <div class="intern-grid" id="intern-grid"></div>
       </div>
     </section>
 
@@ -285,30 +228,8 @@
       <div class="container">
         <p class="section-eyebrow" data-i18n="edu.eyebrow">Academic background</p>
         <h2 class="section-title" data-i18n="edu.title">Education</h2>
-        <div class="edu-grid">
-          <div class="edu-card reveal">
-            <div class="edu-date">Sep 2025 – Ongoing</div>
-            <h3 data-i18n="edu.d1.deg">Ph.D., Control &amp; Automation Engineering</h3>
-            <div class="edu-org">Yıldız Technical University — Istanbul, Türkiye</div>
-          </div>
-          <div class="edu-card reveal">
-            <div class="edu-date">Feb 2023 – Jul 2025</div>
-            <h3 data-i18n="edu.d2.deg">M.Sc., Electrical Engineering</h3>
-            <div class="edu-org">Yıldız Technical University — Istanbul, Türkiye</div>
-            <div class="edu-grade" data-i18n="edu.d2.grade">Grade: 3.57 / 4 — Electrical Machines &amp; Power Electronics</div>
-          </div>
-          <div class="edu-card reveal">
-            <div class="edu-date">Mar 2024 – Jul 2024</div>
-            <h3 data-i18n="edu.d3.deg">Machine Learning Bootcamp</h3>
-            <div class="edu-org">Frontier Tech Leaders Programme &amp; SDG AI Lab — Istanbul</div>
-          </div>
-          <div class="edu-card reveal">
-            <div class="edu-date">2020</div>
-            <h3 data-i18n="edu.d4.deg">B.Sc., Automation &amp; Control Systems</h3>
-            <div class="edu-org">Omdurman Islamic University — Omdurman, Sudan</div>
-            <div class="edu-grade" data-i18n="edu.d4.grade">First-Class Honours</div>
-          </div>
-        </div>
+        <!-- Education cards are rendered from assets/data/content.json by content.js -->
+        <div class="edu-grid" id="edu-grid"></div>
 
         <h3 class="sub-title" data-i18n="edu.certs">Certifications</h3>
         <div class="cert-cloud reveal">
@@ -386,6 +307,7 @@
     </div>
   </footer>
 
+  <script src="assets/js/content.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>

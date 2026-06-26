@@ -1,0 +1,211 @@
+{
+  "publications": [
+    {
+      "link": "https://ieeexplore.ieee.org/abstract/document/10946099",
+      "tag": {
+        "en": "IEEE Access",
+        "tr": "IEEE Access",
+        "ar": "IEEE Access"
+      },
+      "title": {
+        "en": "Wavelet-Enhanced Hybrid LSTM-XGBoost Model for Predicting Time Series Containing Unpredictable Events",
+        "tr": "Öngörülemeyen Olaylar İçeren Zaman Serilerini Tahmin Etmek için Wavelet-Geliştirilmiş Hibrit LSTM-XGBoost Modeli",
+        "ar": "نموذج هجين LSTM-XGBoost معزّز بالموجات (Wavelet) للتنبؤ بالسلاسل الزمنية المحتوية على أحداث غير متوقعة"
+      },
+      "desc": {
+        "en": "A hybrid forecasting framework combining wavelet decomposition with LSTM and XGBoost to improve prediction accuracy for volatile time series.",
+        "tr": "Dalgalanan zaman serilerinde tahmin doğruluğunu artırmak için wavelet ayrıştırmasını LSTM ve XGBoost ile birleştiren hibrit bir tahmin çerçevesi.",
+        "ar": "إطار تنبؤ هجين يجمع بين تحليل الموجات ونموذجي LSTM وXGBoost لتحسين دقة التنبؤ في السلاسل الزمنية المتقلّبة."
+      },
+      "meta": {
+        "en": "Journal article · IEEE Access",
+        "tr": "Dergi makalesi · IEEE Access",
+        "ar": "مقال في مجلة علمية · IEEE Access"
+      }
+    },
+    {
+      "link": "https://www.researchgate.net/publication/395460220_Comparison_of_Deep_Learning_Architectures_to_Evaluate_the_Effect_of_COVID-19_on_Electricity_Consumption",
+      "tag": {
+        "en": "Deep Learning",
+        "tr": "Derin Öğrenme",
+        "ar": "التعلّم العميق"
+      },
+      "title": {
+        "en": "Comparison of Deep Learning Architectures to Evaluate the Effect of COVID-19 on Electricity Consumption",
+        "tr": "COVID-19'un Elektrik Tüketimine Etkisini Değerlendirmek için Derin Öğrenme Mimarilerinin Karşılaştırılması",
+        "ar": "مقارنة بنى التعلّم العميق لتقييم تأثير كوفيد-19 على استهلاك الكهرباء"
+      },
+      "desc": {
+        "en": "A comparative study of deep learning architectures analyzing the impact of the COVID-19 pandemic on electricity consumption patterns.",
+        "tr": "COVID-19 salgınının elektrik tüketim örüntüleri üzerindeki etkisini analiz eden, derin öğrenme mimarilerini karşılaştıran bir çalışma.",
+        "ar": "دراسة مقارنة لبنى التعلّم العميق تحلّل تأثير جائحة كوفيد-19 على أنماط استهلاك الكهرباء."
+      },
+      "meta": {
+        "en": "Research paper",
+        "tr": "Araştırma makalesi",
+        "ar": "ورقة بحثية"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "tags": ["Control Systems", "SolidWorks", "Embedded"],
+      "title": {
+        "en": "Robotic Arm Design & Implementation",
+        "tr": "Robotik Kol Tasarımı & Uygulaması",
+        "ar": "تصميم وتنفيذ ذراع روبوتية"
+      },
+      "desc": {
+        "en": "Designed and implemented a functional robotic arm, covering mechanical design, actuation, and control system integration.",
+        "tr": "Mekanik tasarım, tahrik ve kontrol sistemi entegrasyonunu kapsayan işlevsel bir robotik kol tasarladım ve uyguladım.",
+        "ar": "صمّمتُ ونفّذتُ ذراعًا روبوتية عاملة، شملت التصميم الميكانيكي والتحريك وتكامل نظام التحكم."
+      }
+    },
+    {
+      "tags": ["Python", "Machine Learning", "LSTM", "XGBoost"],
+      "title": {
+        "en": "Wavelet-Integrated Forecasting Framework",
+        "tr": "Wavelet Entegre Tahmin Çerçevesi",
+        "ar": "إطار تنبؤ مدمج مع الموجات (Wavelet)"
+      },
+      "desc": {
+        "en": "A time-series forecasting framework integrating wavelet transforms with machine learning models for robust prediction under uncertainty.",
+        "tr": "Belirsizlik altında sağlam tahmin için wavelet dönüşümlerini makine öğrenmesi modelleriyle entegre eden bir zaman serisi tahmin çerçevesi.",
+        "ar": "إطار للتنبؤ بالسلاسل الزمنية يدمج تحويلات الموجات مع نماذج التعلّم الآلي لتنبؤ موثوق في ظل عدم اليقين."
+      }
+    },
+    {
+      "tags": ["Deep Learning", "Python", "Time Series"],
+      "title": {
+        "en": "COVID-19 Electricity Consumption Study",
+        "tr": "COVID-19 Elektrik Tüketimi Çalışması",
+        "ar": "دراسة استهلاك الكهرباء خلال كوفيد-19"
+      },
+      "desc": {
+        "en": "Applied and compared deep learning architectures to model the effect of the pandemic on national electricity consumption.",
+        "tr": "Salgının ulusal elektrik tüketimi üzerindeki etkisini modellemek için derin öğrenme mimarilerini uyguladı ve karşılaştırdı.",
+        "ar": "طبّق وقارن بنى التعلّم العميق لنمذجة تأثير الجائحة على استهلاك الكهرباء الوطني."
+      }
+    }
+  ],
+  "experience": [
+    {
+      "date": "Jan 2021 – Oct 2022",
+      "org": "Omdurman Islamic University — Omdurman, Sudan",
+      "role": {
+        "en": "Teaching Assistant",
+        "tr": "Araştırma Görevlisi",
+        "ar": "مساعد تدريس"
+      },
+      "desc": {
+        "en": "Supported instruction and laboratory work in control and electrical engineering courses.",
+        "tr": "Kontrol ve elektrik mühendisliği derslerinde öğretim ve laboratuvar çalışmalarına destek verdim.",
+        "ar": "قدّمتُ الدعم في التدريس والأعمال المخبرية لمقررات هندسة التحكم والكهرباء."
+      }
+    },
+    {
+      "date": "Feb 2021 – Jul 2021",
+      "org": "Zeta Automation Systems — Khartoum, Sudan",
+      "role": {
+        "en": "Automation System Engineer",
+        "tr": "Otomasyon Sistem Mühendisi",
+        "ar": "مهندس أنظمة أتمتة"
+      },
+      "desc": {
+        "en": "Worked on industrial automation solutions, PLC programming, and control system integration.",
+        "tr": "Endüstriyel otomasyon çözümleri, PLC programlama ve kontrol sistemi entegrasyonu üzerinde çalıştım.",
+        "ar": "عملتُ على حلول الأتمتة الصناعية وبرمجة PLC وتكامل أنظمة التحكم."
+      }
+    },
+    {
+      "date": "2017 – 2020",
+      "org": "The Little Volunteer Organization — Khartoum, Sudan",
+      "role": {
+        "en": "Volunteer",
+        "tr": "Gönüllü",
+        "ar": "متطوّع"
+      },
+      "desc": {
+        "en": "Contributed to community initiatives and team-based volunteer programs.",
+        "tr": "Toplumsal girişimlere ve ekip temelli gönüllülük programlarına katkıda bulundum.",
+        "ar": "ساهمتُ في مبادرات مجتمعية وبرامج تطوّعية ضمن فرق عمل."
+      }
+    }
+  ],
+  "internships": [
+    {
+      "org": "Sudanese Electricity Transmission Co.",
+      "text": {
+        "en": "Devices & Control, Substations (10 kV), Protection",
+        "tr": "Cihazlar & Kontrol, Trafo Merkezleri (10 kV), Koruma",
+        "ar": "الأجهزة والتحكم، المحطات الفرعية (10 ك.ف)، الحماية"
+      }
+    },
+    {
+      "org": "Automation Research Center (ARC)",
+      "text": {
+        "en": "SCADA, RTU, Master Station, Smart Grid",
+        "tr": "SCADA, RTU, Ana İstasyon, Akıllı Şebeke",
+        "ar": "SCADA وRTU والمحطة الرئيسية والشبكة الذكية"
+      }
+    },
+    {
+      "org": "DAL Food Industries",
+      "text": {
+        "en": "PLCs, HMI & communication protocols (practical)",
+        "tr": "PLC, HMI & haberleşme protokolleri (uygulamalı)",
+        "ar": "أنظمة PLC وHMI وبروتوكولات الاتصال (عمليًا)"
+      }
+    }
+  ],
+  "education": [
+    {
+      "date": "Sep 2025 – Ongoing",
+      "org": "Yıldız Technical University — Istanbul, Türkiye",
+      "deg": {
+        "en": "Ph.D., Control & Automation Engineering",
+        "tr": "Doktora, Kontrol & Otomasyon Mühendisliği",
+        "ar": "دكتوراه، هندسة التحكم والأتمتة"
+      },
+      "grade": { "en": "", "tr": "", "ar": "" }
+    },
+    {
+      "date": "Feb 2023 – Jul 2025",
+      "org": "Yıldız Technical University — Istanbul, Türkiye",
+      "deg": {
+        "en": "M.Sc., Electrical Engineering",
+        "tr": "Yüksek Lisans, Elektrik Mühendisliği",
+        "ar": "ماجستير، الهندسة الكهربائية"
+      },
+      "grade": {
+        "en": "Grade: 3.57 / 4 — Electrical Machines & Power Electronics",
+        "tr": "Not: 3.57 / 4 — Elektrik Makineleri & Güç Elektroniği",
+        "ar": "المعدّل: 3.57 / 4 — الآلات الكهربائية وإلكترونيات القدرة"
+      }
+    },
+    {
+      "date": "Mar 2024 – Jul 2024",
+      "org": "Frontier Tech Leaders Programme & SDG AI Lab — Istanbul",
+      "deg": {
+        "en": "Machine Learning Bootcamp",
+        "tr": "Makine Öğrenmesi Bootcamp",
+        "ar": "معسكر تدريبي في التعلّم الآلي"
+      },
+      "grade": { "en": "", "tr": "", "ar": "" }
+    },
+    {
+      "date": "2020",
+      "org": "Omdurman Islamic University — Omdurman, Sudan",
+      "deg": {
+        "en": "B.Sc., Automation & Control Systems",
+        "tr": "Lisans, Otomasyon & Kontrol Sistemleri",
+        "ar": "بكالوريوس، أنظمة الأتمتة والتحكم"
+      },
+      "grade": {
+        "en": "First-Class Honours",
+        "tr": "Birincilik Derecesi",
+        "ar": "مرتبة الشرف الأولى"
+      }
+    }
+  ]
+}
