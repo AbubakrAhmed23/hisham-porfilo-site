@@ -344,8 +344,12 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 .footer-social a:hover { color: var(--accent); }
 
 /* ===================== REVEAL ANIMATION ===================== */
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
-.reveal.in-view { opacity: 1; transform: none; }
+/* Content is visible by DEFAULT. The hidden-then-reveal effect only applies
+   once main.js confirms it can safely reveal (adds .reveal-ready to <html>).
+   This guarantees a JS/observer failure can never leave a section blank. */
+.reveal { transition: opacity .6s ease, transform .6s ease; }
+html.reveal-ready .reveal { opacity: 0; transform: translateY(28px); }
+html.reveal-ready .reveal.in-view { opacity: 1; transform: none; }
 
 /* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
@@ -377,6 +381,7 @@ html[data-theme="light"] .theme-toggle .icon-moon { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  html.reveal-ready .reveal,
+  html.reveal-ready .reveal.in-view { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
 }

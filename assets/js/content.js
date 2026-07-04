@@ -114,8 +114,11 @@
     renderExperience(DATA.experience || []);
     renderInternships(DATA.internships || []);
     renderEducation(DATA.education || []);
-    // register the freshly created cards with the scroll-reveal observer
+    // register the freshly created cards with the scroll-reveal observer.
+    // fallback: if main.js hasn't defined it (load order / failure), reveal
+    // the cards directly so a section is never left blank.
     if (typeof window.HHObserveReveals === "function") window.HHObserveReveals();
+    else document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in-view"));
   }
 
   // no-store so admin edits show up immediately (content.json must not be

@@ -51,51 +51,87 @@ document.querySelectorAll(".segs").forEach((seg) => {
 });
 
 /* ===================== Reveal on scroll ===================== */
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("in-view");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-// observe a set of .reveal elements (default: whole document).
-// exposed so content.js can register cards it renders after page load.
-window.HHObserveReveals = (root = document) =>
-  root.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
-window.HHObserveReveals();
+// Reveal anything currently on screen right now — belt-and-braces so
+// async-rendered cards (content.js) or deep-linked sections (#projects,
+// #experience) never stay stuck at opacity:0 waiting for a scroll event.
+const revealVisible = (root = document) => {
+  const vh = window.innerHeight || document.documentElement.clientHeight;
+  root.querySelectorAll(".reveal:not(.in-view)").forEach((el) => {
+    const r = el.getBoundingClientRect();
+    if (r.top < vh * 0.95 && r.bottom > 0) el.classList.add("in-view");
+  });
+};
+
+if ("IntersectionObserver" in window) {
+  // Opt into the hidden-then-reveal effect only now that we know we can
+  // reveal it. Without this class the CSS keeps all content visible.
+  root.classList.add("reveal-ready");
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  // observe a set of .reveal elements (default: whole document).
+  // exposed so content.js can register cards it renders after page load.
+  window.HHObserveReveals = (scope = document) => {
+    revealVisible(scope); // reveal what's already on screen immediately
+    scope.querySelectorAll(".reveal:not(.in-view)").forEach((el) => revealObserver.observe(el));
+  };
+  window.HHObserveReveals();
+
+  // Safety net: if anything is still hidden after load (observer race,
+  // async content that landed off-screen), reveal what's on screen.
+  window.addEventListener("load", () => revealVisible());
+  window.addEventListener("resize", () => revealVisible(), { passive: true });
+} else {
+  // No IntersectionObserver → never hide anything; just show every card.
+  window.HHObserveReveals = (scope = document) =>
+    scope.querySelectorAll(".reveal").forEach((el) => el.classList.add("in-view"));
+  window.HHObserveReveals();
+}
 
 // trigger the segment scale animation when a skill card enters view
-const skillObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll(".skill").forEach((s) => s.classList.add("in-view"));
-        skillObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.25 }
-);
-document.querySelectorAll(".skill-card").forEach((c) => skillObserver.observe(c));
+if ("IntersectionObserver" in window) {
+  const skillObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll(".skill").forEach((s) => s.classList.add("in-view"));
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.25 }
+  );
+  document.querySelectorAll(".skill-card").forEach((c) => skillObserver.observe(c));
+} else {
+  document.querySelectorAll(".skill-card .skill").forEach((s) => s.classList.add("in-view"));
+}
 
 /* ===================== Active nav link on scroll ===================== */
-const sections = [...document.querySelectorAll("main section[id]")];
-const navAnchors = [...navLinks.querySelectorAll("a")];
-const spy = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navAnchors.forEach((a) =>
-          a.classList.toggle("active", a.getAttribute("href") === "#" + id)
-        );
-      }
-    });
-  },
-  { rootMargin: "-45% 0px -50% 0px" }
-);
-sections.forEach((s) => spy.observe(s));
+if ("IntersectionObserver" in window) {
+  const sections = [...document.querySelectorAll("main section[id]")];
+  const navAnchors = [...navLinks.querySelectorAll("a")];
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          navAnchors.forEach((a) =>
+            a.classList.toggle("active", a.getAttribute("href") === "#" + id)
+          );
+        }
+      });
+    },
+    { rootMargin: "-45% 0px -50% 0px" }
+  );
+  sections.forEach((s) => spy.observe(s));
+}
